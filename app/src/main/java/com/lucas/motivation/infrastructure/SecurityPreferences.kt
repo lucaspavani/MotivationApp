@@ -1,18 +1,17 @@
 package com.lucas.motivation.infrastructure
 
-import android.content.SharedPreferences
 import android.content.Context
 
 class SecurityPreferences(context: Context) {
 
-    private val security: SharedPreferences =
-        context.getSharedPreferences("Motivation", Context.MODE_PRIVATE)
+    private val sharedPreferences = context.getSharedPreferences("Motivation", Context.MODE_PRIVATE)
 
-    fun storeString(key: String, str: String) {
-        security.edit().putString(key, str).apply()
+    fun storeString(key: String, value: String) {
+        sharedPreferences.edit().putString(key, value).apply()
     }
 
-    fun getString(key: String): String {
-        return security.getString(key, "") ?: ""
+    fun getStoredString(key: String): String {
+        return sharedPreferences.getString(key, "") ?: ""
     }
+
 }

@@ -3,12 +3,19 @@ package com.lucas.motivation.infrastructure
 class MotivationConstants private constructor() {
 
     object KEY {
-        const val USER_NAME = "USER_NAME"
+        const val PERSON_NAME = "personName"
     }
 
-    object FILTER {
-        const val ALL = 1
-        const val HAPPY = 2
-        const val SUNNY = 3
+    object PHRASEFILTER {
+        const val ALL = 0
+        const val HAPPY = 1
+        const val SUNNY = 2
     }
+
+    object LANGUAGE {
+        const val ENGLISH = "en"
+        const val PORTUGUESE = "pt"
+        const val FRENCH = "fr"
+    }
+
 }
